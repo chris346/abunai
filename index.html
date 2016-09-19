@@ -68,7 +68,7 @@
 			}
 		}
 		#title h1{
-			text-align: lefts;
+			text-align: left;
 			font-size: 20px;
 		}
 		@media screen and (min-width: 690px){
@@ -77,15 +77,68 @@
 				font-size: 30px;
 			}
 		}
-/*		nav{
-			background-color:pink
+/*message***********************************************/
+		.message-on {
+			background-color:#191970;
+			color: #fff;
+			position: fixed;
+  			left: 0;
+  			top:20;
+  			z-index: 1001;
+  			padding: 10px;
 		}
-*/		.menu-on{
+		aside.messageBoard{
+  			background-color: orange;
+  			width: 100px;
+  			position: fixed;
+  			right: 0;
+  			top: 0;
+  			min-width: 200px;
+  			z-index: 1002;
+  			display: none;
+  		}
+
+		aside.messageBoard.message {
+			background-color: #7B68EE;
+			margin: 5px;
+			padding: 5px 10px;
+		}
+
+
+  		#toggle-messageBoard:checked ~ aside.messageBoard {
+  			display: block;
+  		}
+		#toggle-messageBoard{
+  			display: none;
+  		}
+		.message-off { 
+			position: fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0,0,0, 0.6);
+			z-index: 1000;
+			display: none;
+		}
+		#toggle-messageBoard:checked ~ .message-off {
+			display: block;
+		}
+		@media screen and (min-width: 690px){
+			.message-on, .message-off { 
+				display: none;
+			}
+		}
+
+/*message***********************************************/
+
+/*Menu***********************************************/
+		.menu-on{
 			background-color:#000;
 			color:#fff;
 			position: fixed;
 			right: 0;
-			top: 0;
+			top: 20;
 			z-index: 1001;
 			padding: 10px;
 		}
@@ -139,6 +192,7 @@
 				display: inline-block;
 			}
 		}
+/*message***********************************************/
 		#content1{
 			position: relative;
 			padding-bottom: 42%;
@@ -152,6 +206,7 @@
   			left: 0;*/
   			background-color: lightblue;
   		}
+
 		#selectionBar{
 			background-color:blue;
 			text-align: center;
@@ -199,9 +254,17 @@
 				</div>
 				<div id="headerContent">
 					<div id="title"><h1>ABUNAI MMA</h1></div>
+					
+
+
 					<input id="toggle-menu" type="checkbox" />
 					<label for="toggle-menu" class="menu-on">Menu On</label>
 					<label for="toggle-menu" class="menu-off"></label>
+
+					<input id="toggle-messageBoard" type="checkbox" />
+					<label for="toggle-messageBoard" class="message-on">Message On</label>
+					<label for="toggle-messageBoard" class="message-off"></label>
+					
 					<nav class="primary-nav">
 						<a href="https://www.facebook.com/events/birthdays?extra_data[start_date]=2016%2F09%2F15&extra_data[notif_id]=1473955455803721&extra_data[notif_type]=birthday_reminder&notif_t=birthday_reminder&notif_id=1473955455803721">Home</a>
 						<a href="">Members</a>
@@ -214,7 +277,12 @@
 			<div id="content1">
 				<div class="inner">
 					<div id="content1Inner">
-						content1
+						
+						<aside class="messageBoard">
+							<div class="message">message</div>
+							<div class="message">message</div>
+							<div class="message">message</div>
+						</aside>
 					</div>
 				</div>
 			</div>
