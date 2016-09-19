@@ -89,14 +89,22 @@
 		}
 		aside.messageBoard{
   			background-color: orange;
-  			width: 100px;
   			position: fixed;
   			right: 0;
   			top: 0;
-  			min-width: 200px;
+  			left: 0;
+  			bottom: 0;
+  			margin: 50px 100px 50px 0px;
+  			/*min-width: 200px;*/
   			z-index: 1002;
   			display: none;
   		}
+  		@media screen and (min-width: 690px){
+			aside.messageBoard {
+				width:300px;
+
+			}
+		}
 
 		aside.messageBoard.message {
 			background-color: #7B68EE;
@@ -127,6 +135,14 @@
 		@media screen and (min-width: 690px){
 			.message-on, .message-off { 
 				display: none;
+			}
+			aside.messageBoard {
+				display: block;
+				position: static;
+				padding-bottom: 34%;
+			}
+			aside.messageBoard.message {
+				display: inline-block;
 			}
 		}
 
@@ -185,14 +201,13 @@
 			nav.primary-nav {
 				display: block;
 				position: static;
-		/*		margin-left: 150px;*/
 			}
 
 			nav.primary-nav a {
 				display: inline-block;
 			}
 		}
-/*message***********************************************/
+/*Menu***********************************************/
 		#content1{
 			position: relative;
 			padding-bottom: 42%;
@@ -242,66 +257,65 @@
 </head>
 <body>
 	<div id="outer">
-<!-- 		<div id="contentImage1">
-			<div id="contentImage1">
-			</div>	
-		</div>
-		<div id="circleGradient"></div>
- -->		
-			<header>
-				<div id="logo">
-					logo
-				</div>
-				<div id="headerContent">
-					<div id="title"><h1>ABUNAI MMA</h1></div>
+		
+		<header>
+			<div id="logo">
+				logo
+			</div>
+			<div id="headerContent">
+				
+				<div id="title"><h1>ABUNAI MMA</h1></div>
+				
+				<input id="toggle-menu" type="checkbox" />
+				<label for="toggle-menu" class="menu-on">Menu On</label>
+				<label for="toggle-menu" class="menu-off"></label>
+				
+				<nav class="primary-nav">
+					<a href="https://www.facebook.com/events/birthdays?extra_data[start_date]=2016%2F09%2F15&extra_data[notif_id]=1473955455803721&extra_data[notif_type]=birthday_reminder&notif_t=birthday_reminder&notif_id=1473955455803721">Home</a>
+					<a href="">Members</a>
+					<a href="">Competitions</a>
+					<a href="">About Us</a>
+					<a href="">Contact Us</a>
+				</nav>
+			
+			</div>
+		</header>
+		
+		<div id="content1">
+			<div class="inner">
+				<div id="content1Inner">
 					
-
-
-					<input id="toggle-menu" type="checkbox" />
-					<label for="toggle-menu" class="menu-on">Menu On</label>
-					<label for="toggle-menu" class="menu-off"></label>
-
 					<input id="toggle-messageBoard" type="checkbox" />
 					<label for="toggle-messageBoard" class="message-on">Message On</label>
 					<label for="toggle-messageBoard" class="message-off"></label>
 					
-					<nav class="primary-nav">
-						<a href="https://www.facebook.com/events/birthdays?extra_data[start_date]=2016%2F09%2F15&extra_data[notif_id]=1473955455803721&extra_data[notif_type]=birthday_reminder&notif_t=birthday_reminder&notif_id=1473955455803721">Home</a>
-						<a href="">Members</a>
-						<a href="">Competitions</a>
-						<a href="">About Us</a>
-						<a href="">Contact Us</a>
-					</nav>
-				</div>
-			</header>
-			<div id="content1">
-				<div class="inner">
-					<div id="content1Inner">
-						
-						<aside class="messageBoard">
-							<div class="message">message</div>
-							<div class="message">message</div>
-							<div class="message">message</div>
-						</aside>
-					</div>
+					<aside class="messageBoard">
+						<div class="message">message</div>
+						<div class="message">message</div>
+						<div class="message">message</div>
+					</aside>
+				
 				</div>
 			</div>
-			<div id="selectionBar">
-				<div class="selectionBox">members</div>
-				<div class="selectionBox">check-in</div>
-				<div class="selectionBox">chat</div>
-			</div>
+		</div>
+		
+		<div id="selectionBar">
+			<div class="selectionBox">members</div>
+			<div class="selectionBox">check-in</div>
+			<div class="selectionBox">chat</div>
+		</div>
+	
 		<div class="inner">
 			<div id="content2">
 				content2
 			</div>
 		</div>	
-			<div id="content3">
-				conetent3
-			</div>
-			<footer>
-				
-			</footer>
+		<div id="content3">
+			conetent3
+		</div>
+		<footer>
+			
+		</footer>
 	</div>
 </body>
 </html>
