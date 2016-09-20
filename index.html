@@ -45,7 +45,7 @@
 			max-width: 960px;
 			min-width: 150px;
 			margin: 0 auto;
-			/*background-color:lightblue;*/
+			background-color: red;
 		}
 		header{
 			background-color:red;
@@ -94,7 +94,7 @@
   			top: 0;
   			left: 0;
   			bottom: 0;
-  			margin: 50px 100px 50px 0px;
+  			margin: 31px 100px 50px 0px;
   			/*min-width: 200px;*/
   			z-index: 1002;
   			display: none;
@@ -172,7 +172,7 @@
 			background-color: #000;
 			position: fixed;
 			right: 0;
-			top: 0;
+			top: 20;
 			min-width: 200px;
 			z-index: 1002;
 			display: none;
@@ -210,7 +210,7 @@
 /*Menu***********************************************/
 		#content1{
 			position: relative;
-			padding-bottom: 42%;
+			padding-bottom: 32%;
 			height: 0;
 			background-color: hotpink;
 		}
@@ -226,19 +226,23 @@
 			background-color:blue;
 			text-align: center;
 		}	
+		#selectionBar .inner {
+			display: flex;
+		}
 		.selectionBox{
 			background-color:white;
-			width:100%;
-			display:block;
-			margin-top: 5px;
+	/*		width:100%;*/
+			display: inline-block;
 			padding: 10px;
+			flex: 1;
 		}
 		@media screen and (min-width: 690px){
 			.selectionBox{
-				display: inline-block;
-				max-width:180px;
-				margin-right:10px;
-				margin-left:10px;
+				/*max-width:180px;*/
+				margin-right:30px;
+				margin-left:30px;
+				transform: translate(0px, -30px);
+				height:125px;
 			}
 		}
 
@@ -300,9 +304,11 @@
 		</div>
 		
 		<div id="selectionBar">
-			<div class="selectionBox">members</div>
-			<div class="selectionBox">check-in</div>
-			<div class="selectionBox">chat</div>
+			<div class="inner">
+				<div class="selectionBox">members</div>
+				<div class="selectionBox">check-in</div>
+				<div class="selectionBox">chat</div>
+			</div>
 		</div>
 	
 		<div class="inner">
